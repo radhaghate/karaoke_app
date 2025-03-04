@@ -1,5 +1,7 @@
-import 'lib/services/youtube_service.dart';
-import 'lib/services/supabase_service.dart';
+import '../services/youtube_service.dart';
+import '../services/supabase_service.dart';
+//import 'package:path/path.dart' as path;
+/*make sure import statements work as expected or add /lib */
 
 class SongRepository {
   final YouTubeService youtubeService = YouTubeService();

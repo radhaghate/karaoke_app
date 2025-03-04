@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../screens/home_screen.dart';  // Add this import statement to use HomeScreen
+
 
 
 void main() async{
@@ -11,6 +13,23 @@ void main() async{
   runApp(const MyApp());
 }
 
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Karaoke App',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: HomeScreen(videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'),  // Pass video URL here
+    );
+  }
+}
+
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -127,3 +146,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
